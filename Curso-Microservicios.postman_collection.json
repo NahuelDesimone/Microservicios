@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "fd58f6b2-b988-4c23-b17b-80c4227ca117",
+		"name": "Curso-Microservicios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "16406010"
+	},
+	"item": [
+		{
+			"name": "listarUsuarios",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerUsuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8001/3"
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarUsuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8001/3"
+			},
+			"response": []
+		},
+		{
+			"name": "crearUsuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"John\",\r\n    \"email\":\"john@correo.com\",\r\n    \"password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8001"
+			},
+			"response": []
+		},
+		{
+			"name": "editarUsuario",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"John Doe\",\r\n    \"email\":\"john@correo.com\",\r\n    \"password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8001/3"
+			},
+			"response": []
+		}
+	]
+}

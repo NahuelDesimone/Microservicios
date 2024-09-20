@@ -18,6 +18,7 @@
 
     <modules>
         <module>microservicio-usuarios</module>
+        <module>microservicio-cursos</module>
     </modules>
 
     <properties>
