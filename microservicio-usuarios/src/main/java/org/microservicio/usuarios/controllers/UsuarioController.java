@@ -1,6 +1,6 @@
 package org.microservicio.usuarios.controllers;
 
-import org.microservicio.usuarios.models.entity.Usuario;
+import org.microservicio.usuarios.entity.Usuario;
 import org.microservicio.usuarios.services.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

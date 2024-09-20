@@ -1,7 +1,7 @@
-package org.microservicio.usuarios.services;
+package org.microservicio.cursos.services;
 
-import org.microservicio.usuarios.entity.Usuario;
-import org.microservicio.usuarios.repositories.UsuarioRepository;
+import org.microservicio.cursos.entity.Curso;
+import org.microservicio.cursos.repositories.CursoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -10,26 +10,26 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class UsuarioServiceImpl implements UsuarioService{
+public class CursoServiceImpl implements CursoService{
 
     @Autowired
-    private UsuarioRepository repository;
+    private CursoRepository repository;
 
     @Override
     @Transactional(readOnly = true)
-    public List<Usuario> listar() {
-        return (List<Usuario>) repository.findAll();
+    public List<Curso> listar() {
+        return (List<Curso>) repository.findAll();
     }
 
     @Override
     @Transactional(readOnly = true)
-    public Optional<Usuario> porId(Long id) {
+    public Optional<Curso> porId(Long id) {
         return repository.findById(id);
     }
 
     @Override
     @Transactional
-    public Usuario guardar(Usuario usuario) {
+    public Curso guardar(Curso usuario) {
         return repository.save(usuario);
     }
 

@@ -1,6 +1,6 @@
 package org.microservicio.usuarios.services;
 
-import org.microservicio.usuarios.models.entity.Usuario;
+import org.microservicio.usuarios.entity.Usuario;
 
 import java.util.List;
 import java.util.Optional;
