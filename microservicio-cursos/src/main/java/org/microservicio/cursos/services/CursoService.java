@@ -1,6 +1,7 @@
 package org.microservicio.cursos.services;
 
-import org.microservicio.cursos.entity.Curso;
+import org.microservicio.cursos.models.Usuario;
+import org.microservicio.cursos.models.entity.Curso;
 
 import java.util.List;
 import java.util.Optional;
@@ -12,4 +13,10 @@ public interface CursoService {
     Optional<Curso> porId(Long id);
     Curso guardar(Curso usuario);
     void eliminar(Long id);
+
+
+    // Aca se crea el contrato de todos los servicios relacionados al microservicio de Usuarios
+    Optional<Usuario> asignarUsuario(Usuario usuario, Long cursoId);
+    Optional<Usuario> crearUsuario(Usuario usuario, Long cursoId);
+    Optional<Usuario> eliminarUsuario(Usuario usuario, Long cursoId);
 }

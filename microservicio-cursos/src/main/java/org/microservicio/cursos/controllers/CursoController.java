@@ -1,7 +1,7 @@
 package org.microservicio.cursos.controllers;
 
 import jakarta.validation.Valid;
-import org.microservicio.cursos.entity.Curso;
+import org.microservicio.cursos.models.entity.Curso;
 import org.microservicio.cursos.services.CursoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
