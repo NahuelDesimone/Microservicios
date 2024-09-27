@@ -1,11 +1,10 @@
-package org.microservicio.cursos;
+package org.microservicio.cursos.clients;
 
 import org.microservicio.cursos.models.Usuario;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 
 //Esta interfaz es la que se encarga de comunicarse con el microservicio de usuarios y consumir todos sus servicios
@@ -17,6 +16,9 @@ public interface UsuarioClientRest {
 
     @PostMapping
     Usuario crear(@RequestBody Usuario usuario);
+
+    @GetMapping("/usuarios-por-curso")
+    List<Usuario> obtenerUsuariosPorCurso(@RequestParam Iterable<Long> ids);
 
 
 }
