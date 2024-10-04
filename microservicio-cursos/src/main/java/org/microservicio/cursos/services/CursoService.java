@@ -15,6 +15,7 @@ public interface CursoService {
     Curso guardar(Curso usuario);
     void eliminar(Long id);
 
+    void eliminarCursoUsuarioPorId(Long id);
 
     // Aca se crea el contrato de todos los servicios relacionados al microservicio de Usuarios
     Optional<Usuario> asignarUsuario(Usuario usuario, Long cursoId);
