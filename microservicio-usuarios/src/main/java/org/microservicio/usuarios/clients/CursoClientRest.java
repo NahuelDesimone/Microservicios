@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 //Esta interfaz es la que se encarga de comunicarse con el microservicio de cursos y consumir todos sus servicios
-@FeignClient(name = "microservicio-cursos", url = "host.docker.internal:8002")
+@FeignClient(name = "microservicio-cursos", url = "microservicio-cursos:8002")
 public interface CursoClientRest {
 
     @DeleteMapping("/eliminar-curso-usuario/{id}")
