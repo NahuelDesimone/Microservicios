@@ -8,7 +8,7 @@ import java.util.List;
 
 
 //Esta interfaz es la que se encarga de comunicarse con el microservicio de usuarios y consumir todos sus servicios
-@FeignClient(name = "microservicio-usuarios", url = "microservicio-usuarios:8001")
+@FeignClient(name = "microservicio-usuarios", url = "${msvc.usuarios.url}")
 public interface UsuarioClientRest {
 
     @GetMapping("/{id}")
